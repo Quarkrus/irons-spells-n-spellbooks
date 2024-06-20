@@ -8,7 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
-@Mod.EventBusSubscriber(modid= IronsSpellbooks.MODID, bus=Bus.FORGE)
+@EventBusSubscriber(modid= IronsSpellbooks.MODID, bus=Bus.FORGE)
 public class DataHandling {
 
     @SubscribeEvent

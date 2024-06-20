@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class GluttonyEffect extends MagicMobEffect {
     public GluttonyEffect(MobEffectCategory pCategory, int pColor) {
         super(pCategory, pColor);

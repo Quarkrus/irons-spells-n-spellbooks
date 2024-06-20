@@ -29,7 +29,7 @@ import java.util.HashMap;
 //StatusEffect
 //MobEffect: https://forge.gemwire.uk/wiki/Mob_Effects/1.18
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class DamageSources {
     public static DamageSource get(Level level, ResourceKey<DamageType> damageType) {
         return level.damageSources().source(damageType);

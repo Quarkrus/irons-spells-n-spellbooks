@@ -43,7 +43,7 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class AdditionalWanderingTrades {
 
     //By default, wandering traders spawn with 5 random generic trades, and 1 random rare trade (6 trades total)

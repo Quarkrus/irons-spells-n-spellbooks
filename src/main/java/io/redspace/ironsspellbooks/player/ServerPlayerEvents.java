@@ -86,7 +86,7 @@ import top.theillusivec4.curios.api.event.CurioChangeEvent;
 
 import java.util.Optional;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ServerPlayerEvents {
 
     //    @SubscribeEvent

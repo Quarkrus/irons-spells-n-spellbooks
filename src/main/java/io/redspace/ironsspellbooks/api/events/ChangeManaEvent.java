@@ -3,9 +3,8 @@ package io.redspace.ironsspellbooks.api.events;
 
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.Cancelable;
+import net.neoforged.bus.api.ICancellableEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 
 /**
  * ChangeManaEvent is fired whenever a {@link Player}'s mana is changed via {@link io.redspace.ironsspellbooks.api.magic.MagicData#setMana(float)}.<br>
@@ -15,9 +14,9 @@ import net.minecraftforge.eventbus.api.Cancelable;
  * <br>
  * This event does not have a result. {@link HasResult}<br>
  * <br>
- * This event is fired on the {@link MinecraftForge#EVENT_BUS}.<br>
+ * This event is fired on the {@link net.neoforged.neoforge.common.NeoForge#EVENT_BUS}.<br>
  **/
-public class ChangeManaEvent extends PlayerEvent {
+public class ChangeManaEvent extends PlayerEvent implements ICancellableEvent {
     private final MagicData magicData;
     private final float oldMana;
     private float newMana;
@@ -27,11 +26,6 @@ public class ChangeManaEvent extends PlayerEvent {
         this.magicData = magicData;
         this.oldMana = oldMana;
         this.newMana = newMana;
-    }
-
-    @Override
-    public boolean isCancelable() {
-        return true;
     }
 
     public MagicData getMagicData() {

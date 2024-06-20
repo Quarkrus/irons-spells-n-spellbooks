@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.logging.Level;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class OakskinEffect extends CustomDescriptionMobEffect {
     public static final float REDUCTION_PER_LEVEL = .05f;
     public static final float BASE_REDUCTION = .10f;

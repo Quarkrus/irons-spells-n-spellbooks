@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.loading.FMLLoader;
 
 
-@Mod.EventBusSubscriber()
+@EventBusSubscriber()
 public class CommandRegistry {
     @SubscribeEvent
     public static void onCommandsRegister(RegisterCommandsEvent event) {

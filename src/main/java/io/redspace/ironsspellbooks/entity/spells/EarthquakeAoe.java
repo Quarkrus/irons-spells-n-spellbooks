@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-@Mod.EventBusSubscriber(Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class EarthquakeAoe extends AoeEntity implements AntiMagicSusceptible {
     public static Map<UUID, EarthquakeAoe> clientEarthquakeOrigins = new HashMap<>();
 

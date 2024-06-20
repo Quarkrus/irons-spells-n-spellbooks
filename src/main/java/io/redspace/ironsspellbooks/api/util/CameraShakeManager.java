@@ -4,17 +4,16 @@ import io.redspace.ironsspellbooks.network.ClientboundSyncCameraShake;
 import io.redspace.ironsspellbooks.setup.Messages;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.ViewportEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.event.TickEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO: make IManager and shit
 @Mod.EventBusSubscriber
 public class CameraShakeManager {
     public static final ArrayList<CameraShakeData> cameraShakeData = new ArrayList<>();

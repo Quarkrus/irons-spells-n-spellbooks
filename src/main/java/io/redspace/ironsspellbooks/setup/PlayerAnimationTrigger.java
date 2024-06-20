@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.Mod;
  * Example, how to trigger animations on specific players
  * Always trigger animation on client-side.  Maybe as a response to a network packet or event
  */
-@Mod.EventBusSubscriber(modid = IronsSpellbooks.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@EventBusSubscriber(modid = IronsSpellbooks.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class PlayerAnimationTrigger {
 
     //We need to know when to play an animation

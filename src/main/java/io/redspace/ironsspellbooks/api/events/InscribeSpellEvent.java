@@ -3,9 +3,8 @@ package io.redspace.ironsspellbooks.api.events;
 
 import io.redspace.ironsspellbooks.api.spells.SpellData;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.Cancelable;
+import net.neoforged.bus.api.ICancellableEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 
 /**
  * InscribeSpellEvent is fired whenever a {@link Player} inscribes a spell into a spellbook.<br>
@@ -15,9 +14,9 @@ import net.minecraftforge.eventbus.api.Cancelable;
  * <br>
  * This event does not have a result. {@link HasResult}<br>
  * <br>
- * This event is fired on the {@link MinecraftForge#EVENT_BUS}.<br>
+ * This event is fired on the {@link net.neoforged.neoforge.common.NeoForge#EVENT_BUS}.<br>
  **/
-public class InscribeSpellEvent extends PlayerEvent {
+public class InscribeSpellEvent extends PlayerEvent implements ICancellableEvent{
     private final SpellData spellData;
 
     public InscribeSpellEvent(Player player, SpellData spellData)
@@ -25,9 +24,6 @@ public class InscribeSpellEvent extends PlayerEvent {
         super(player);
         this.spellData = spellData;
     }
-
-    @Override
-    public boolean isCancelable() { return true; }
 
     public SpellData getSpellData() {
         return this.spellData;

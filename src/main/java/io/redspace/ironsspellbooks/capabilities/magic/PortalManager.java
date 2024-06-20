@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
-//@Mod.EventBusSubscriber
+//@EventBusSubscriber
 public class PortalManager implements INBTSerializable<CompoundTag> {
 
     public static final PortalManager INSTANCE = new PortalManager();
